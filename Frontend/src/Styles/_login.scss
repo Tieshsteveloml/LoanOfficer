@@ -1,0 +1,144 @@
+.formWrap {
+  max-width: 675px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin: auto;
+  padding: 40px;
+  &.signup {
+    width: 100%;
+    max-width: 100%;
+  }
+  &.rating {
+    width: 100%;
+    max-width: 100%;
+
+    .rating_title {
+      font-family: "Electrolize", sans-serif;
+      font-size: 50px;
+      line-height: 59px;
+      color: $SECONDARY;
+      margin-bottom: 40px;
+    }
+  }
+  .inlineFormItems {
+    width: 100%;
+    justify-content: space-between;
+    .inputWrap {
+      flex: 1;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.hasmargin {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  @media (max-width: 990px) {
+    &.rating {
+      padding: 30px;
+      .rating_title {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @media (max-width: 690px) {
+    .inlineFormItems {
+      flex-direction: column;
+      .inputWrap {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    padding: 20px;
+    &.rating {
+      padding: 15px;
+    }
+  }
+}
+.createWid {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  .hrw {
+    display: inline-block;
+    position: relative;
+    padding: 0 10%;
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $PRIMARY;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+  h2 {
+    display: inline-block;
+    font-size: 35px;
+    background: $WHITE;
+  }
+  ul {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    li {
+      a {
+        display: block;
+        text-decoration: none;
+        font-family: "SegoeUI";
+        color: $SECONDARY;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 29px;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 0 25px;
+        &:hover {
+          color: $PRIMARY;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 28px;
+    }
+    ul {
+      li {
+        a {
+          font-size: 16px;
+          line-height: 20px;
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 0;
+    .hrw {
+      padding: 0px 20%;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    ul {
+      li {
+        a {
+          font-size: 13px;
+          line-height: 16px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

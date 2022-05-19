@@ -1,0 +1,134 @@
+.top-header {
+  background-color: $LIGHT_ASH;
+  overflow: hidden;
+  padding: 24px 0;
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      .socialLinks {
+        li {
+          a {
+            display: block;
+            padding: 24px 30px;
+            background: $WHITE;
+            transition: all 0.3s ease-in-out;
+            img {
+              transition: all 0.3s ease-in-out;
+              height: 20px;
+            }
+            &:hover {
+              background: $SECONDARY;
+              img {
+                filter: brightness(2000);
+              }
+            }
+          }
+        }
+      }
+      .topHeaderNavLink {
+        align-items: center;
+
+        li {
+          position: relative;
+          a {
+            text-decoration: none;
+            font-size: 18px;
+            color: $PRIMARY;
+            padding: 0 10px;
+          }
+
+          &:after {
+            content: "/";
+          }
+          &:last-child {
+            a {
+              padding-right: 0;
+            }
+          }
+          &:last-child:after {
+            display: none;
+          }
+        }
+      }
+    }
+    .right {
+      ul {
+        li {
+          font-size: 18px;
+          color: $PRIMARY;
+          margin-right: 25px;
+          a {
+            text-decoration: none;
+            color: $PRIMARY;
+          }
+          img {
+            vertical-align: middle;
+            margin-right: 15px;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 0;
+
+    .container {
+      .left {
+        .topHeaderNavLink {
+          li {
+            a {
+              font-size: 14px !important;
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+      .right {
+        ul {
+          li {
+            img {
+              margin-right: 0 !important;
+              max-width: 16px;
+            }
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .container {
+      .right {
+        ul {
+          li {
+            margin-right: 0;
+            font-size: 15px;
+            img {
+              margin-right: 5px;
+              max-width: 15px;
+            }
+          }
+        }
+      }
+      .left {
+        .topHeaderNavLink {
+          li {
+            margin-right: 0;
+            font-size: 15px;
+            a {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,555 @@
+// FONTS
+@import "Styles/fonts";
+
+// COLORS
+@import "Styles/colors";
+
+// STYLES
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: $WHITE;
+  font-family: "SegoeUI";
+  font-size: 16px;
+  font-weight: 400;
+}
+ul,
+li,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.signupErrors {
+  margin-top: 30px;
+}
+.center {
+  text-align: center;
+}
+.loadingavatarimage {
+  padding: 40%;
+  background: $WHITE;
+}
+.nocontent {
+  margin-bottom: 60px;
+}
+.loading {
+  text-align: center;
+  img {
+    max-width: 30px;
+    padding: 60px 0;
+  }
+}
+.dflx {
+  display: flex;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @media (max-width: 1440px) {
+    max-width: 1160px;
+  }
+  @media (max-width: 1200px) {
+    max-width: 960px;
+  }
+  @media (max-width: 1160px) {
+    max-width: 90%;
+  }
+}
+h2 {
+  font-family: "Electrolize", sans-serif;
+  font-size: 42px;
+  font-style: normal;
+
+  line-height: 42px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: $PRIMARY;
+
+  @media (max-width: 1440px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+h3 {
+  font-family: "Electrolize", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: $WHITE;
+}
+h4 {
+  font-family: "Electrolize", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+
+  line-height: 23px;
+  letter-spacing: 0.09em;
+  text-align: left;
+  color: $WHITE;
+
+  @media (max-width: 480px) {
+    font-size: 17px;
+
+    line-height: 20px;
+  }
+}
+
+.sectionHead {
+  text-align: center;
+  margin-bottom: 35px;
+  h2 {
+    text-align: center;
+  }
+  p {
+    color: $PRIMARY;
+    font-size: 17px;
+    line-height: 27px;
+    margin-top: 15px;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      br {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    p {
+      font-size: 15px;
+      line-height: 17px;
+    }
+  }
+}
+.PAGENOTFOUND {
+  padding: 30px 0;
+}
+.section {
+  padding: 100px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 480px) {
+    padding: 30px 0;
+  }
+}
+.inputWrap {
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  label {
+    font-family: "Electrolize", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $BLACK;
+
+    input {
+      display: block;
+      margin-top: 18px;
+      border: 1px solid #ebebeb;
+      font-size: 18px;
+      font-family: "Electrolize", sans-serif;
+      color: #242222;
+      border-radius: 6px;
+      width: 100%;
+      padding: 20px 20px;
+      outline: none;
+      background: #f9f9f9;
+    }
+    textarea {
+      display: block;
+      margin-top: 18px;
+      border: 1px solid #ebebeb;
+      font-size: 18px;
+      font-family: "Electrolize", sans-serif;
+      color: #242222;
+      border-radius: 6px;
+      width: 100%;
+      padding: 30px 28px;
+      outline: none;
+      background: #f9f9f9;
+      resize: none;
+      height: 153px;
+    }
+
+    &.large {
+      font-size: 28px;
+      line-height: 42px;
+      color: $PRIMARY;
+      font-weight: 600;
+      @media (max-width: 990px) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+      @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    &.larger {
+      font-size: 35px;
+      line-height: 42px;
+      color: $PRIMARY;
+      font-weight: 600;
+
+      @media (max-width: 990px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .form-btn {
+    display: block;
+    width: 100%;
+    background: $SECONDARY;
+    border: none;
+    padding: 28px;
+    font-family: "Electrolize", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: $WHITE;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
+    max-width: 595px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+      background: $PRIMARY;
+    }
+    &.small-btn {
+      width: auto;
+      padding: 20px 42px;
+      font-weight: normal;
+    }
+  }
+  ::-webkit-input-placeholder {
+    /* Edge */
+    font-family: "Electrolize", sans-serif;
+    font-size: 18px;
+    color: #cdc8c8;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-family: "Electrolize", sans-serif;
+    font-size: 18px;
+    color: #cdc8c8;
+  }
+
+  ::placeholder {
+    font-family: "Electrolize", sans-serif;
+    font-size: 18px;
+    color: #cdc8c8;
+  }
+
+  @media (max-width: 768px) {
+    label {
+      input {
+        padding: 20px;
+      }
+      textarea {
+        padding: 20px;
+      }
+    }
+    .form-btn {
+      padding: 20px;
+    }
+  }
+}
+.ratingPoint {
+  box-sizing: border-box;
+  margin-top: 24px;
+  background: $WHITE;
+  li {
+    &:first-child {
+      span {
+        border-left: 1px solid #ebebeb;
+        border-radius: 6px 0 0 6px;
+      }
+    }
+    label {
+      display: block;
+      input {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: -1000%;
+      }
+      span {
+        padding: 10px 30px;
+        border-right: 1px solid #ebebeb;
+        display: block;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background: #ebebeb;
+        }
+      }
+      input:checked ~ span {
+        background-color: $SECONDARY;
+        color: $WHITE;
+      }
+    }
+    &:last-child {
+      label {
+        span {
+          border-radius: 0px 6px 6px 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 990px) {
+    li {
+      label {
+        span {
+          padding: 8px 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 730px) {
+    li {
+      flex: 1;
+      label {
+        span {
+          padding: 10px 0;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.icon_btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 221px;
+  padding: 14px;
+  background: $SECONDARY;
+  font-size: 19px;
+  line-height: 21px;
+  color: $WHITE;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: $PRIMARY;
+  }
+
+  @media (max-width: 1024px) {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 15px;
+    line-height: 20px;
+    img {
+      width: 12px;
+    }
+  }
+}
+.customRadio {
+  label {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    font-family: "Mulish", sans-serif;
+    color: #b0b0b0;
+    input {
+      visibility: hidden;
+      position: absolute;
+      opacity: 0;
+    }
+    span {
+      width: 24px;
+      height: 24px;
+      border: 1px solid #10a3fe;
+      background: $WHITE;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #f0f7fb;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+    input:checked ~ span {
+      &:after {
+        background: $SECONDARY;
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    label {
+      font-size: 14px;
+      span {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+.show-menu {
+  overflow: hidden;
+}
+.error {
+  color: #ff0000;
+  font-family: "Electrolize", sans-serif;
+  line-height: 30px;
+  font-size: 14px;
+}
+.btnset {
+  width: auto;
+  padding: 10px 25px;
+  margin: 0 8px;
+}
+button.icon_btn.cancelbtn {
+  background: $WHITE;
+  color: $SECONDARY;
+}
+.editItemLi {
+  align-items: center;
+  .inputWrap {
+    flex: 1;
+    input {
+      margin-top: 0;
+    }
+  }
+}
+.ratingNumb {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  // border: 2px solid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px !important;
+  vertical-align: middle;
+  position: relative;
+  z-index: 9;
+  margin-right: 10px;
+  line-height: 0px !important;
+  margin-bottom: 5px;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    border-radius: 50%;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: 6px solid;
+    z-index: -1;
+  }
+
+  &.orange {
+    border-color: #fab34f !important;
+    color: #fab34f !important;
+
+    &:before {
+      border: 1px solid #fab34f !important;
+    }
+    &:after {
+      border: 6px solid #feeacc !important;
+    }
+  }
+  &.green {
+    color: #67c763 !important;
+
+    &:before {
+      border: 1px solid #67c763 !important;
+    }
+    &:after {
+      border: 6px solid #d5f6d3 !important;
+    }
+  }
+  &.gray {
+    border-color: gray !important;
+    color: #a1a1a1 !important;
+
+    &:before {
+      border: 1px solid #a1a1a1 !important;
+    }
+    &:after {
+      border: 6px solid #e0e0e0 !important;
+    }
+  }
+}
+.alreadyhaveanaccount {
+  text-align: center;
+  margin-top: 10px;
+  a {
+    text-decoration: none;
+    color: #008fd5;
+    font-weight: bold;
+  }
+}
+
+@import "./Styles/topHeader";
+@import "./Styles/header";
+@import "./Styles/banner";
+@import "./Styles/searchBar";
+@import "./Styles/professionals";
+@import "./Styles/login";
+@import "./Styles/_userProfile";
+@import "./Styles/profileInfo";
+@import "./Styles/footer";

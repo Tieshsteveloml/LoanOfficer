@@ -1,0 +1,250 @@
+.bottomHeader {
+  background: $WHITE;
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      font-family: "Electrolize", sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 30px;
+      color: $PRIMARY;
+      text-decoration: none;
+    }
+    nav {
+      align-items: center;
+      ul {
+        margin-right: 32px;
+
+        li {
+          a {
+            font-weight: 600;
+            font-size: 18px;
+            color: $DARK_1;
+            text-decoration: none;
+            font-family: "SegoeUI";
+            padding: 30px 20px;
+            display: block;
+            position: relative;
+
+            &:after {
+              content: "";
+              display: block;
+              width: 0%;
+              height: 2px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                $SECONDARY,
+                transparent
+              );
+              position: absolute;
+              bottom: 10px;
+              opacity: 0;
+              left: 0;
+              transition: all 0.3s ease-in-out;
+            }
+            &:before {
+              content: "";
+              display: block;
+              width: 0%;
+              height: 2px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                $SECONDARY,
+                transparent
+              );
+              position: absolute;
+              top: 10px;
+              opacity: 0;
+              left: 0;
+              transition: all 0.3s ease-in-out;
+            }
+
+            &:hover:after {
+              opacity: 1;
+              width: 100%;
+            }
+            &:hover:before {
+              opacity: 1;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .callWidget {
+        align-items: center;
+        position: relative;
+        border-left: 1px solid #e6eaef;
+        padding-left: 14px;
+        p {
+          color: $TEXT_COLOR_LIGHT;
+          font-size: 16px;
+          line-height: 21px;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        a {
+          color: #0c2139;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 29px;
+          letter-spacing: 0em;
+          text-decoration: none;
+          text-align: left;
+        }
+        img {
+          max-width: 38px;
+          display: block;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .hamb-btn {
+    display: none;
+    min-width: 56px;
+    padding: 15px;
+    margin-left: 20px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      nav {
+        .nav-lists {
+          display: none;
+        }
+        .callWidget {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+      .hamb-btn {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    .container {
+      nav {
+        .callWidget {
+          img {
+            max-width: 25px;
+            margin-right: 10px;
+          }
+          p {
+            font-size: 10px;
+            line-height: 15px;
+          }
+          a {
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .container {
+      .logo {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+  @media (max-width: 440px) {
+    .container {
+      .nav {
+        .callWidget {
+          position: fixed;
+          background: rgba(255, 255, 255, 0.5);
+          width: 160px;
+          right: 0px;
+          margin-right: -55px;
+          padding: 7px;
+          backdrop-filter: blur(8px);
+          transform: rotate(-90deg);
+          top: 50%;
+          z-index: 9999;
+        }
+      }
+    }
+  }
+}
+
+.mobile-header {
+  position: fixed;
+  top: 136px;
+  height: 100%;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  border: 1px solid #ededed;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+
+  .backDrop {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 143, 213, 0.6);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .menuHolder {
+    width: 70%;
+    background: $WHITE;
+    height: 100%;
+    overflow: auto;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    left: -100%;
+    position: relative;
+    ul {
+      li {
+        a {
+          font-size: 20px;
+          text-decoration: none;
+          display: block;
+          font-family: "Electrolize", sans-serif;
+          padding: 15px;
+          color: $PRIMARY;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    top: 108px;
+  }
+  @media (max-width: 360px) {
+    top: 103px;
+  }
+}
+
+.show-menu {
+  .mobile-header {
+    visibility: visible;
+    opacity: 1;
+    .backDrop {
+      opacity: 1;
+    }
+    .menuHolder {
+      left: 0;
+    }
+  }
+}
